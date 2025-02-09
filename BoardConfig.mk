@@ -24,6 +24,10 @@ BOARD_VENDOR_RAMDISK_KERNEL_MODULES += $(addprefix $(KERNEL_PREBUILT_DIR)/vendor
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD += $(device_second_stage_modules)
 BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD += $(device_second_stage_modules)
 
+# HIDL
+DEVICE_MANIFEST_FILE += \
+    $(DEVICE_PATH)/configs/vintf/manifest_vermeer.xml
+
 # OTA
 TARGET_OTA_ASSERT_DEVICE := vermeer
 
