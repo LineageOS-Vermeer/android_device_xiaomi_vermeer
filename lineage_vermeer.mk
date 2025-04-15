@@ -35,7 +35,7 @@ WITH_GMS ?= true
 
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="vermeer_global-user 13 TKQ1.221114.001 V816.0.11.0.UMCMIXM release-keys" \
+    BuildDesc="vermeer_global-user 13 TKQ1.221114.001 OS2.0.100.0.VNKMIXM release-keys" \
     DeviceProduct=$(PRODUCT_SYSTEM_NAME) \
     DeviceName=$(PRODUCT_SYSTEM_DEVICE) \
-    BuildFingerprint=POCO/vermeer_global/vermeer:13/TKQ1.221114.001/V816.0.11.0.UMCMIXM:user/release-keys
+    BuildFingerprint=POCO/vermeer_global/vermeer:13/TKQ1.221114.001/OS2.0.100.0.VNKMIXM:user/release-keys
