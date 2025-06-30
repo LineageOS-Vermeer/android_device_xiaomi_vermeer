@@ -134,7 +134,6 @@ odm/etc/audio/misound_res_spk_power_sva_powersave.bin
 odm/etc/audio/misound_res_spk_power_video.bin
 odm/etc/audio/misound_res_spk_power_video_powersave.bin
 odm/etc/audio/misoundsa_spk_config.bin
-odm/etc/audio/silent-3sec.wav
 vendor/etc/hrtf5c.bin
 
 # Audio (Configs)

@@ -4,7 +4,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-
 from extract_utils.fixups_blob import (
     blob_fixup,
     blob_fixups_user_type,
@@ -28,14 +27,9 @@ namespace_imports = [
 
 blob_fixups: blob_fixups_user_type = {
     (
-        'odm/etc/camera/aivsModel_6C06C006',
-        'odm/lib64/libmialgo_aisn.so',
-    ): blob_fixup()
-        .split_bytes(20 * 1024 * 1024),  # 20MB chunks
-    (
         'odm/etc/camera/enhance_motiontuning.xml',
         'odm/etc/camera/night_motiontuning.xml',
-        'odm/etc/camera/motiontuning.xml',
+        'odm/etc/camera/motiontuning.xml'
     ): blob_fixup()
         .regex_replace(r'<\?xml=', '<?xml '),
     (
@@ -45,6 +39,7 @@ blob_fixups: blob_fixups_user_type = {
     (
         'odm/lib64/libailab_rawhdr.so',
         'odm/lib64/libxmi_high_dynamic_range_cdsp.so',
+        'odm/lib64/libmialgo_aisn.so'
     ): blob_fixup()
         .strip_debug_sections(),
 }
@@ -56,7 +51,6 @@ module = ExtractUtilsModule(
     lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,
     check_elf=True,
-    add_firmware_proprietary_file=True,
 )
 
 if __name__ == '__main__':
